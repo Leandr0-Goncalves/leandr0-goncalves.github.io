@@ -12,7 +12,7 @@ body {
     width: 100%;
     height: 100%;
 }
- 
+
 .main-content {
     width: 50vw;
     padding: 80px;
@@ -69,6 +69,8 @@ section {
 }
 
 .card {
+    height: auto;
+    display: flex;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -94,7 +96,7 @@ section {
     z-index: 2;
     background-color: #ffffff;
     border-radius: 25px;
-    height: 8900px;
+    
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 49px;
 }
@@ -106,22 +108,10 @@ section {
     z-index: 2;
     background-color: #ffffff;
     border-radius: 25px;
-    height: 4300px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 49px;
 }
 
-.col2 {
-    margin-left: 15px;
-    position: relative;
-    top: 80px;
-    z-index: 2;
-    background-color: #ffffff;
-    border-radius: 25px;
-    height: 3800px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 49px;
-}
 
 .waveimg {
     position: relative;
