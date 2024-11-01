@@ -1,0 +1,140 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f1f1f1;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.main {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    width: 50vw;
+    padding: 80px;
+}
+
+h1 {
+    
+    text-align: center; 
+    font-size: 50px;
+    padding-top: 20px;
+    font-weight: 900;
+    color: #000000;
+}
+
+h2 {
+    padding-top: 36px;
+    text-align: center; 
+    font-weight: 900;
+    font-size: 25px;
+    color: #ce5d12;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 95px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #000000;
+}
+
+
+
+p {
+    margin-top: 20px;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.second-content h1 {
+    text-align: center; 
+}
+
+.second-content p {
+    font-size: 18px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.img-fluid {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+}
+
+.col {
+    margin-left: 15px;
+    position: relative;
+    top: 80px;
+    z-index: 2;
+    background-color: #ffffff;
+    border-radius: 25px;
+    height: 8900px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 49px;
+}
+
+.col1 {
+    margin-left: 15px;
+    position: relative;
+    top: 80px;
+    z-index: 2;
+    background-color: #ffffff;
+    border-radius: 25px;
+    height: 4300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 49px;
+}
+
+.col2 {
+    margin-left: 15px;
+    position: relative;
+    top: 80px;
+    z-index: 2;
+    background-color: #ffffff;
+    border-radius: 25px;
+    height: 3800px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 49px;
+}
+
+.waveimg {
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+
+img {
+    border-radius: 25px;
+    margin: 5px;
+}
+
+i {
+    font-size: 50px;
+    margin: 25px;
+}
