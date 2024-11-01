@@ -28,14 +28,21 @@ h1 {
 }
 
 h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #000000;
+}
+
+h3 {
     padding-top: 36px;
     text-align: center; 
     font-weight: 900;
     font-size: 25px;
     color: #f80000;
 }
-
-h3 {
+h4 {
     text-align: center;
     padding-top: 110px;
     font-size: 25px;
