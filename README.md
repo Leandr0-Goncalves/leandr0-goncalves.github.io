@@ -1,1 +1,1 @@
-Um portfólio contendo minha participação nas palestras P-Tech. 
+Um portfólio contendo minha participação nas palestras do P-Tech. 
