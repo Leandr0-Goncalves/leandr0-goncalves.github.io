@@ -1,0 +1,52 @@
+<!-- partials/header.html -->
+<!-- Comentário: Navbar reutilizável. Os links usam data-target para o script ajustar o caminho dependendo da página (root ou pages/). -->
+<header>
+  <nav
+    class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-2"
+  >
+    <div class="container">
+      <!-- logo / foto (usar data-src para que o script ajuste o caminho) -->
+      <a class="navbar-brand d-flex align-items-center" data-target="home">
+        <img
+          data-src="imgs/profile.jpg"
+          alt="foto perfil"
+          class="rounded-circle me-2"
+          width="42"
+          height="42"
+        />
+        <span class="fw-bold">leandro</span>
+      </a>
+
+      <!-- botão mobile -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navCollapse"
+        aria-controls="navCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navCollapse"
+      >
+        <ul class="navbar-nav align-items-lg-center">
+          <!-- data-target: identificador lógico, o include.js transforma em href correto -->
+          <li class="nav-item">
+            <a class="nav-link" data-target="ptech">PTECH</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-target="projects">projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-target="about">about</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
