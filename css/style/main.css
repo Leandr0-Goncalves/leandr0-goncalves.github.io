@@ -13,14 +13,13 @@
   --text-secondary: #cfd8df;
 }
 
-/* ======= BASE E TIPOGRAFIA ======= */
 body {
   background: linear-gradient(to right, var(--dark-bg-1), var(--dark-bg-2));
   color: var(--text-primary);
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
 }
 
-/* ======= COMPONENTES GLOBAIS (BOTÕES, CORES) ======= */
+/* geral */
 .text-cyan {
   color: var(--cyan-color) !important;
 }
@@ -50,8 +49,8 @@ body {
   transform: translateY(-2px);
 }
 
-/* ======= NAVBAR ======= */
-/* O seu partial/header.html usa classes Bootstrap, então estilizamos elas */
+/* Navbar */
+
 .navbar {
   background: rgba(8, 8, 8, 0.9) !important;
   backdrop-filter: blur(5px); /* Efeito de vidro fosco */
@@ -76,7 +75,7 @@ body {
   color: var(--cyan-color) !important;
 }
 
-/* ======= CARDS GLOBAIS ======= */
+/* cards */
 .card {
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -97,4 +96,19 @@ body {
 .card-img-top {
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* empurrando o footer para baixo */
+main {
+  flex-grow: 1;
 }

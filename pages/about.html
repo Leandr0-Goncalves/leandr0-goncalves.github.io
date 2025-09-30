@@ -3,25 +3,100 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>About - Portfólio</title>
+    <title>Sobre Mim | Leandro Gonçalves</title>
 
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/style/header.css" />
-    <link rel="stylesheet" href="../css/style/index.css" />
+    <link rel="stylesheet" href="../css/style/main.css" />
+    <link rel="stylesheet" href="../css/style/ptech.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   </head>
+
   <body class="bg-dark text-light">
     <div id="header"></div>
 
-    <main class="container py-5">
-      <h1>Sobre mim</h1>
-      <p class="text-secondary">
-        Coloque aqui sua formação, objetivos e contatos.
-      </p>
+    <main class="container mt-5 pt-5 mb-5">
+      <header class="text-center mb-5" data-aos="fade-in">
+        <h1 class="display-5 fw-bold text-cyan">Sobre Mim</h1>
+        <p class="lead text-secondary">
+          Um pouco sobre minha jornada, minhas habilidades e como entrar em
+          contato.
+        </p>
+      </header>
+
+      <section>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img
+              src="../imgs/profile.jpg"
+              class="img-fluid rounded-3 shadow-lg"
+              alt="Foto de Leandro Gonçalves"
+            />
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-left">
+            <h4>Minha Formação e Objetivos</h4>
+            <p class="text-secondary">
+              Atualmente cursando Análise e Desenvolvimento de Sistemas na [Nome
+              da Instituição], sou um entusiasta da tecnologia com foco em
+              desenvolvimento web. Busco constantemente aprender novas
+              tecnologias e aplicá-las em projetos práticos, com o objetivo de
+              me tornar um desenvolvedor Full Stack e criar soluções que
+              impactem positivamente a vida das pessoas.
+            </p>
+
+            <h4 class="mt-4">Habilidades (Skills)</h4>
+            <div class="mb-3">
+              <p class="mb-2"><strong>Linguagens & Frontend:</strong></p>
+              <span class="badge bg-primary me-1">HTML5</span>
+              <span class="badge bg-danger me-1">CSS3</span>
+              <span class="badge bg-warning text-dark me-1">JavaScript</span>
+              <span class="badge" style="background-color: #7248b6"
+                >Bootstrap</span
+              >
+            </div>
+            <div>
+              <p class="mb-2"><strong>Ferramentas & Outros:</strong></p>
+              <span class="badge bg-secondary me-1">Git</span>
+              <span class="badge bg-secondary me-1">GitHub</span>
+              <span class="badge bg-secondary me-1">VS Code</span>
+            </div>
+
+            <h4 class="mt-4">Contato</h4>
+            <p class="text-secondary">
+              Vamos nos conectar! Você pode me encontrar nas seguintes
+              plataformas ou me enviar um e-mail.
+            </p>
+            <div>
+              <a
+                href="URL_DO_SEU_LINKEDIN"
+                class="btn btn-outline-light me-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+              <a
+                href="URL_DO_SEU_GITHUB"
+                class="btn btn-outline-light me-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+              <a
+                href="mailto:SEU_EMAIL@exemplo.com"
+                class="btn btn-outline-cyan"
+                >Enviar E-mail</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div id="footer"></div>
 
     <script src="../js/bootstrap/bootstrap.min.js" defer></script>
     <script src="../js/include.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="../js/main.js" defer></script>
   </body>
 </html>

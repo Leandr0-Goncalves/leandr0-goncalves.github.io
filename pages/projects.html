@@ -3,38 +3,118 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Projects - Portfólio</title>
+    <title>Projetos | Leandro Gonçalves</title>
 
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/style/header.css" />
-    <link rel="stylesheet" href="../css/style/index.css" />
+    <link rel="stylesheet" href="../css/style/main.css" />
+    <link rel="stylesheet" href="../css/style/ptech.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   </head>
+
   <body class="bg-dark text-light">
     <div id="header"></div>
 
-    <main class="container py-5">
-      <h1>Projects</h1>
-      <p class="text-secondary">
-        Aqui você colocará seus projetos (games, apps, etc.).
-      </p>
+    <main class="container mt-5 pt-5 mb-5">
+      <header class="text-center mb-5" data-aos="fade-in">
+        <h1 class="display-5 fw-bold text-cyan">Meus Projetos</h1>
+        <p class="lead text-secondary">
+          Uma coleção de projetos que desenvolvi para praticar e demonstrar
+          minhas habilidades.
+        </p>
+      </header>
 
-      <!-- exemplo de card -->
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card bg-dark border-0 shadow h-100">
-            <div class="card-body">
-              <h5 class="card-title">Jogo Exemplo</h5>
-              <p class="text-secondary">Descrição curta do projeto.</p>
-              <a class="btn btn-outline-light" href="#">Ver</a>
+      <section>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="card bg-dark text-light shadow h-100">
+              <img
+                src="https://via.placeholder.com/600x400?text=Imagem+do+Projeto"
+                class="card-img-top"
+                alt="Nome do Projeto 1"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Nome do Projeto 1</h5>
+                <p class="card-text small text-secondary flex-grow-1">
+                  Descrição curta e objetiva do que o projeto faz, qual problema
+                  ele resolve e o que você aprendeu com ele.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-primary">HTML</span>
+                  <span class="badge bg-danger">CSS</span>
+                  <span class="badge bg-warning text-dark">JavaScript</span>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-outline-cyan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver Código</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-cyan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card bg-dark text-light shadow h-100">
+              <img
+                src="https://via.placeholder.com/600x400?text=Imagem+do+Projeto"
+                class="card-img-top"
+                alt="Nome do Projeto 2"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Nome do Projeto 2</h5>
+                <p class="card-text small text-secondary flex-grow-1">
+                  Outra descrição de projeto. Tente variar as tecnologias para
+                  mostrar a amplitude do seu conhecimento.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-info">React</span>
+                  <span class="badge bg-success">Node.js</span>
+                  <span class="badge" style="background-color: #7248b6"
+                    >Bootstrap</span
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-outline-cyan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver Código</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-cyan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <div id="footer"></div>
 
     <script src="../js/bootstrap/bootstrap.min.js" defer></script>
     <script src="../js/include.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="../js/main.js" defer></script>
   </body>
 </html>
