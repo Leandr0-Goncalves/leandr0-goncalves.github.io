@@ -1,71 +1,77 @@
 // js/include.js
-// Comentários: carrega os partials header/footer e ajusta caminhos de links e imagens.
-// Funciona tanto quando a página está na raiz (index.html) quanto dentro de pages/ (ex: pages/ptech.html).
 
-async function fetchPartialTry(paths) {
-  // recebe array de caminhos; retorna texto do primeiro que tiver ok
-  for (const p of paths) {
-    try {
-      const res = await fetch(p);
-      if (res.ok) return await res.text();
-    } catch (e) {
-      // ignora e tenta o próximo
-    }
-  }
-  return null;
-}
-
-async function loadPartial(containerId, relativePath) {
-  // tenta primeiro o caminho tal como está (útil para páginas na raiz)
-  // e depois tenta "../" + relativePath (útil para páginas dentro de pages/)
-  const html = await fetchPartialTry([relativePath, "../" + relativePath]);
-  if (!html) return;
-
-  document.getElementById(containerId).innerHTML = html;
-
-  // Ajustar links com data-target dentro do partial carregado
-  // Mapeia data-target para href adequado (diferente para root vs pages/)
-  const inPagesFolder = location.pathname.includes("/pages/");
-  document
-    .querySelectorAll("#" + containerId + " [data-target]")
-    .forEach((el) => {
-      const target = el.getAttribute("data-target");
-      let href = "#";
-
-      if (inPagesFolder) {
-        // páginas dentro de /pages/
-        if (target === "home") href = "../index.html";
-        else if (target === "ptech") href = "ptech.html";
-        else if (target === "projects") href = "projects.html";
-        else if (target === "about") href = "about.html";
-        else href = target;
-      } else {
-        // páginas na raiz
-        if (target === "home") href = "index.html";
-        else if (target === "ptech") href = "pages/ptech.html";
-        else if (target === "projects") href = "pages/projects.html";
-        else if (target === "about") href = "pages/about.html";
-        else href = target;
-      }
-
-      el.setAttribute("href", href);
-    });
-
-  // Ajustar imagens que usam data-src (para não duplicar caminhos)
-  document
-    .querySelectorAll("#" + containerId + " img[data-src]")
-    .forEach((img) => {
-      const src = img.getAttribute("data-src");
-      const final = (inPagesFolder ? "../" : "") + src;
-      img.setAttribute("src", final);
-    });
-}
-
-// chama os dois partials
 document.addEventListener("DOMContentLoaded", () => {
-  // os IDs header e footer devem existir nas páginas (placeholders)
-  if (document.getElementById("header"))
-    loadPartial("header", "partials/header.html");
-  if (document.getElementById("footer"))
-    loadPartial("footer", "partials/footer.html");
+  // Define os caminhos para os arquivos parciais
+  const headerPath = "partials/header.html";
+  const footerPath = "partials/footer.html";
+
+  // Determina o caminho base (prefixo) dependendo se a página está na pasta 'pages'
+  const isSubpage = window.location.pathname.includes("/pages/");
+  const basePath = isSubpage ? ".." : ".";
+
+  // Função para carregar e injetar o conteúdo HTML
+  const loadHTML = (elementId, filePath) => {
+    fetch(`${basePath}/${filePath}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Não foi possível carregar ${filePath}`);
+        }
+        return response.text();
+      })
+      .then((data) => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.innerHTML = data;
+          // Após carregar o header, processa os links e imagens
+          if (elementId === "header") {
+            processHeaderPaths(element);
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Erro ao carregar HTML parcial:", error);
+        // Exibe um erro na página para facilitar a depuração
+        const element = document.getElementById(elementId);
+        if (element)
+          element.innerHTML = `<p class="text-danger text-center">Erro ao carregar o ${elementId}. Verifique o console.</p>`;
+      });
+  };
+
+  // Carrega o cabeçalho e o rodapé
+  loadHTML("header", headerPath);
+  loadHTML("footer", footerPath);
+
+  // Função para corrigir os caminhos dentro do header carregado
+  const processHeaderPaths = (headerElement) => {
+    const links = headerElement.querySelectorAll("a[data-target]");
+    const images = headerElement.querySelectorAll("img[data-src]");
+
+    // Mapeamento dos alvos dos links para os caminhos reais
+    const pathMap = {
+      home: "index.html",
+      ptech: "pages/ptech.html",
+      projects: "pages/projects.html",
+      about: "pages/about.html",
+    };
+
+    // Corrige os links de navegação
+    links.forEach((link) => {
+      const target = link.dataset.target;
+      if (pathMap[target]) {
+        link.href = `${basePath}/${pathMap[target]}`;
+        // Adiciona a classe 'active' se o link corresponder à página atual
+        if (window.location.pathname.includes(pathMap[target])) {
+          link.classList.add("active");
+        }
+      }
+    });
+
+    // Corrige os caminhos das imagens
+    images.forEach((img) => {
+      const src = img.dataset.src;
+      if (src) {
+        img.src = `${basePath}/${src}`;
+      }
+    });
+  };
 });

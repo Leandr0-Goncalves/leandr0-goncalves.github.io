@@ -3,90 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Início | Portfólio PTECH</title>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style/index.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body class="bg-dark text-light">
-    <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm fixed-top"
-    >
-      <div class="container">
-        <a class="navbar-brand fw-bold text-cyan" href="index.html">P-TECH</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/ptech.html">Portfólio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projetos">Projetos</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <title>Início | Leandro Gonçalves - Portfólio</title>
 
-    <!-- Hero -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+
+  <body class="bg-dark text-light">
+    <div id="header"></div>
+
     <section class="hero d-flex align-items-center text-center min-vh-100">
-      <div class="container mt-5 pt-5">
-        <h1 class="display-3 fw-bold text-cyan">Portfólio P-TECH</h1>
-        <p class="lead fs-4 text-light">
-          Leandro Augusto Rodrigues Gonçalves<br />2º ano de Desenvolvimento de
-          Sistemas - AMS
+      <div class="container" data-aos="zoom-in">
+        <img
+          src="imgs/profile.jpg"
+          class="rounded-circle mb-3"
+          width="150"
+          height="150"
+          alt="Foto de Leandro Gonçalves"
+        />
+        <h1 class="display-4 fw-bold text-cyan">Leandro Gonçalves</h1>
+        <p class="lead fs-4 text-light col-md-8 mx-auto">
+          Estudante de Análise e Desenvolvimento de Sistemas apaixonado por
+          criar soluções web interativas e eficientes.
         </p>
         <a href="pages/ptech.html" class="btn btn-cyan btn-lg mt-3 shadow">
-          Ver Portfólio
+          Conheça meu Portfólio P-TECH
         </a>
       </div>
     </section>
 
-    <!-- Projetos -->
     <section id="projetos" class="py-5 bg-black">
       <div class="container text-center">
-        <h2 class="mb-4 text-cyan">Projetos</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
+        <h2 class="mb-5 text-cyan" data-aos="fade-up">
+          Meus Principais Projetos
+        </h2>
+        <div class="row g-4 justify-content-center">
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="card bg-dark text-light shadow h-100">
-              <div class="card-body">
-                <h5 class="card-title text-cyan">Projeto 1</h5>
-                <p class="card-text">Descrição rápida do projeto 1.</p>
-                <a href="#" class="btn btn-outline-cyan">Ver mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card bg-dark text-light shadow h-100">
-              <div class="card-body">
-                <h5 class="card-title text-cyan">Projeto 2</h5>
-                <p class="card-text">Descrição rápida do projeto 2.</p>
-                <a href="#" class="btn btn-outline-cyan">Ver mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card bg-dark text-light shadow h-100">
-              <div class="card-body">
-                <h5 class="card-title text-cyan">Projeto 3</h5>
-                <p class="card-text">Descrição rápida do projeto 3.</p>
-                <a href="#" class="btn btn-outline-cyan">Ver mais</a>
+              <img
+                src="https://via.placeholder.com/600x400"
+                class="card-img-top"
+                alt="Imagem do Projeto 1"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Nome do Projeto 1</h5>
+                <p class="card-text small text-secondary flex-grow-1">
+                  Descrição curta e objetiva do que o projeto faz.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-primary">HTML</span>
+                  <span class="badge bg-danger">CSS</span>
+                  <span class="badge bg-warning text-dark">JavaScript</span>
+                </div>
+                <div>
+                  <a href="#" class="btn btn-sm btn-outline-cyan">Ver Código</a>
+                  <a href="#" class="btn btn-sm btn-cyan">Live Demo</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <a href="pages/projects.html" class="btn btn-outline-light mt-5"
+          >Ver todos os projetos</a
+        >
       </div>
     </section>
+
+    <div id="footer"></div>
+
+    <script src="../js/bootstrap/bootstrap.min.js" defer></script>
+    <script src="js/include.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

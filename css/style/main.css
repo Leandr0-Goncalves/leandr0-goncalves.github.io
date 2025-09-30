@@ -1,0 +1,100 @@
+/* css/style/main.css */
+
+/* ======= IMPORTS E VARIÁVEIS (BOA PRÁTICA) ======= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+  --cyan-color: #00d9ff;
+  --dark-bg-1: #0d0d0d;
+  --dark-bg-2: #1a1a1a;
+  --card-bg: rgba(20, 20, 20, 0.95);
+  --border-color: rgba(255, 255, 255, 0.05);
+  --text-primary: #e6eef3;
+  --text-secondary: #cfd8df;
+}
+
+/* ======= BASE E TIPOGRAFIA ======= */
+body {
+  background: linear-gradient(to right, var(--dark-bg-1), var(--dark-bg-2));
+  color: var(--text-primary);
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+/* ======= COMPONENTES GLOBAIS (BOTÕES, CORES) ======= */
+.text-cyan {
+  color: var(--cyan-color) !important;
+}
+
+.btn-cyan {
+  background-color: var(--cyan-color);
+  color: #000;
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-cyan:hover {
+  background-color: #00b8d4;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-cyan {
+  border: 1px solid var(--cyan-color);
+  color: var(--cyan-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-outline-cyan:hover {
+  background-color: var(--cyan-color);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ======= NAVBAR ======= */
+/* O seu partial/header.html usa classes Bootstrap, então estilizamos elas */
+.navbar {
+  background: rgba(8, 8, 8, 0.9) !important;
+  backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+.navbar .navbar-brand .fw-bold {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+.navbar .navbar-brand:hover .fw-bold {
+  color: var(--cyan-color);
+}
+.navbar .nav-link {
+  font-weight: 500;
+  color: var(--text-secondary) !important;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--cyan-color) !important;
+}
+
+/* ======= CARDS GLOBAIS ======= */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 217, 255, 0.2);
+}
+.card .card-title {
+  color: var(--cyan-color);
+  font-weight: 700;
+}
+.card .card-text {
+  color: var(--text-secondary);
+}
+.card-img-top {
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
